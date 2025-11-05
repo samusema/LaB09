@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard amministrativa Pizzeria B09 - Gestisci ordini, menu e statistiche">
+    <title>Pizzeria B09 - Dashboard</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- Hero Section - Full Screen Background -->
+    <section class="hero" id="hero">
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <div class="hero__logo">
+                <img src="assets/img/logo-icon.svg" alt="Pizzeria B09 Logo">
+            </div>
+            <h1 class="hero__title">PAZZI PIZZA</h1>
+            <p class="hero__subtitle">PIZZA PERFECTION,<br>PAZZI STYLE!</p>
+            <p class="hero__estd">ESTD 2023</p>
+            <button class="hero__scroll-btn" id="scrollBtn">
+                <i class="fas fa-chevron-down"></i>
+            </button>
+        </div>
+    </section>
+
+    <!-- Top Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__container">
+            <div class="navbar__brand">
+                <button class="navbar__toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h2 class="navbar__logo">Pizzeria B09</h2>
+            </div>
+            <div class="navbar__menu">
+                <a href="#contatti" class="navbar__contact-btn">
+                    <i class="fas fa-phone"></i>
+                    <span>Contattaci</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar__header">
+            <h3 class="sidebar__title">Menu</h3>
+        </div>
+        <nav class="sidebar__nav">
+            <ul class="sidebar__menu">
+                <li class="sidebar__item sidebar__item--active">
+                    <a href="#home" class="sidebar__link" data-section="home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#menu" class="sidebar__link" data-section="menu">
+                        <i class="fas fa-pizza-slice"></i>
+                        <span>Il Nostro Menu</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#about" class="sidebar__link" data-section="about">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Chi Siamo</span>
+                    </a>
+                </li>
+                <li class="sidebar__item">
+                    <a href="#contatti" class="sidebar__link" data-section="contatti">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Dove Siamo</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content" id="mainContent">
+        
+        <!-- Home Section -->
+        <section class="content-section content-section--active" id="home">
+            <header class="section-header">
+                <h1 class="section-header__title">Benvenuti da Pizzeria B09</h1>
+                <p class="section-header__subtitle">La vera pizza napoletana nel cuore della città</p>
+            </header>
+
+            <!-- Main Info Boxes - 2 BOX PRINCIPALI MODIFICABILI -->
+            <div class="info-boxes">
+                
+                <!-- BOX 1 - Modifica titolo, testo e icona -->
+                <div class="info-box info-box--primary">
+                    <div class="info-box__icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="info-box__content">
+                        <h2 class="info-box__title">Pizza Cotta nel Forno a Legna</h2>
+                        <p class="info-box__text">
+                            Le nostre pizze sono cotte nel tradizionale forno a legna a 450°C, 
+                            garantendo una cottura perfetta e quel gusto autentico che solo 
+                            la vera pizza napoletana può offrire.
+                        </p>
+                        <ul class="info-box__list">
+                            <li><i class="fas fa-check"></i> Impasto a lievitazione naturale 24h</li>
+                            <li><i class="fas fa-check"></i> Ingredienti freschi e selezionati</li>
+                            <li><i class="fas fa-check"></i> Ricette tradizionali napoletane</li>
+                            <li><i class="fas fa-check"></i> Preparazione artigianale</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- BOX 2 - Modifica titolo, testo e icona -->
+                <div class="info-box info-box--secondary">
+                    <div class="info-box__icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="info-box__content">
+                        <h2 class="info-box__title">Consegna a Domicilio</h2>
+                        <p class="info-box__text">
+                            Ordina la tua pizza preferita comodamente da casa! 
+                            Consegniamo in tutta la città con il nostro servizio rapido e affidabile. 
+                            La tua pizza arriverà calda e fragrante, proprio come appena sfornata.
+                        </p>
+                        <ul class="info-box__list">
+                            <li><i class="fas fa-check"></i> Consegna in 30-40 minuti</li>
+                            <li><i class="fas fa-check"></i> Zona di consegna ampia</li>
+                            <li><i class="fas fa-check"></i> Pagamento online o alla consegna</li>
+                            <li><i class="fas fa-check"></i> Tracking dell'ordine in tempo reale</li>
+                        </ul>
+                        <a href="tel:+39123456789" class="info-box__btn">
+                            <i class="fas fa-phone"></i> Chiama per Ordinare
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section class="content-section" id="menu">
+            <header class="section-header">
+                <h1 class="section-header__title">Il Nostro Menu</h1>
+                <p class="section-header__subtitle">Scopri le nostre specialità</p>
+            </header>
+
+            <div class="menu-grid">
+                <div class="menu-card">
+                    <div class="menu-card__image">
+                        <img src="assets/img/pizza-margherita.svg" alt="Margherita">
+                    </div>
+                    <div class="menu-card__content">
+                        <h3 class="menu-card__name">Margherita</h3>
+                        <p class="menu-card__description">Pomodoro, mozzarella, basilico fresco, olio EVO</p>
+                        <span class="menu-card__price">€8.50</span>
+                    </div>
+                </div>
+                <!-- Aggiungi qui altre pizze -->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="content-section" id="about">
+            <header class="section-header">
+                <h1 class="section-header__title">Chi Siamo</h1>
+                <p class="section-header__subtitle">La storia di Pizzeria B09</p>
+            </header>
+
+            <div class="content-card">
+                <div class="content-card__body">
+                    <div class="about-content">
+                        <p class="about-text">
+                            <strong>Pizzeria B09</strong> nasce nel 2023 dalla passione per la vera pizza napoletana. 
+                            Utilizziamo solo ingredienti di prima qualità e seguiamo le ricette tradizionali 
+                            per offrirti un'esperienza autentica in ogni morso.
+                        </p>
+                        <p class="about-text">
+                            Il nostro forno a legna raggiunge temperature di oltre 450°C, garantendo 
+                            una cottura rapida e perfetta che sigilla i sapori e crea quella crosta 
+                            croccante fuori e morbida dentro che tutti amano.
+                        </p>
+                        <h3 class="about-subtitle">I Nostri Valori</h3>
+                        <ul class="about-list">
+                            <li><i class="fas fa-heart"></i> <strong>Passione:</strong> Amiamo ciò che facciamo</li>
+                            <li><i class="fas fa-leaf"></i> <strong>Qualità:</strong> Solo ingredienti freschi e selezionati</li>
+                            <li><i class="fas fa-users"></i> <strong>Tradizione:</strong> Ricette autentiche napoletane</li>
+                            <li><i class="fas fa-smile"></i> <strong>Soddisfazione:</strong> Il cliente al primo posto</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contatti Section -->
+        <section class="content-section" id="contatti">
+            <header class="section-header">
+                <h1 class="section-header__title">Dove Siamo</h1>
+                <p class="section-header__subtitle">Vieni a trovarci o contattaci</p>
+            </header>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-card__icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3 class="contact-card__title">Indirizzo</h3>
+                    <p class="contact-card__text">Via Esempio 123<br>00100 Roma, Italia</p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card__icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3 class="contact-card__title">Telefono</h3>
+                    <p class="contact-card__text">
+                        <a href="tel:+39123456789">+39 123 456 789</a>
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card__icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="contact-card__title">Orari</h3>
+                    <p class="contact-card__text">
+                        Lun-Dom: 12:00 - 15:00<br>
+                        19:00 - 23:00
+                    </p>
+                </div>
+
+                <div class="contact-card">
+                    <div class="contact-card__icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="contact-card__title">Email</h3>
+                    <p class="contact-card__text">
+                        <a href="mailto:info@pizzeriab09.it">info@pizzeriab09.it</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Overlay for mobile sidebar -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+

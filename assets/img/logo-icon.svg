@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <!-- Pizza Background Circle -->
+  <circle cx="60" cy="60" r="55" fill="#fefae0" stroke="#d62828" stroke-width="3"/>
+  
+  <!-- Pizza Slice -->
+  <g transform="translate(60, 60)">
+    <!-- Crust -->
+    <path d="M -40,-15 L 0,-50 L 40,-15 Q 35,-5 30,0 Q 20,5 0,7 Q -20,5 -30,0 Q -35,-5 -40,-15 Z" 
+          fill="#f77f00" stroke="#d62828" stroke-width="2"/>
+    
+    <!-- Pizza Base -->
+    <path d="M -35,-12 L 0,-45 L 35,-12 Q 30,-3 20,2 Q 0,4 -20,2 Q -30,-3 -35,-12 Z" 
+          fill="#ffd93d"/>
+    
+    <!-- Pepperoni 1 -->
+    <circle cx="-15" cy="-20" r="6" fill="#d62828"/>
+    <!-- Pepperoni 2 -->
+    <circle cx="10" cy="-25" r="6" fill="#d62828"/>
+    <!-- Pepperoni 3 -->
+    <circle cx="0" cy="-10" r="6" fill="#d62828"/>
+    
+    <!-- Basil leaves -->
+    <ellipse cx="-8" cy="-15" rx="4" ry="6" fill="#28a745" opacity="0.8" transform="rotate(-20 -8 -15)"/>
+    <ellipse cx="15" cy="-12" rx="4" ry="6" fill="#28a745" opacity="0.8" transform="rotate(25 15 -12)"/>
+  </g>
+  
+  <!-- Spatula crossing -->
+  <g transform="translate(85, 35) rotate(45)">
+    <rect x="-2" y="0" width="4" height="35" fill="#6c757d"/>
+    <path d="M -6,-5 L -6,5 L 6,5 L 6,-5 Z" fill="#adb5bd"/>
+  </g>
+</svg>

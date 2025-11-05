@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#003049;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#d62828;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f77f00;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="pizzaPattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <circle cx="100" cy="100" r="40" fill="#ffd93d" opacity="0.1"/>
+      <circle cx="95" cy="90" r="8" fill="#d62828" opacity="0.2"/>
+      <circle cx="110" cy="95" r="8" fill="#d62828" opacity="0.2"/>
+      <circle cx="100" cy="110" r="8" fill="#d62828" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <rect width="1920" height="1080" fill="url(#heroGradient)"/>
+  <rect width="1920" height="1080" fill="url(#pizzaPattern)"/>
+</svg>
