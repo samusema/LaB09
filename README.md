@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Pizzeria B09 - Dashboard Amministrativa
 
 Dashboard moderna e responsive per la gestione della pizzeria "Pizzeria B09".
@@ -198,3 +199,6 @@ Pizzeria B09 Dashboard - 2023
 ---
 
 **Made with ❤️ and 🍕 by Pizzeria B09**
+=======
+# La B09
+>>>>>>> 96014a89a36efb177944dd21a130e4ea988b95be
