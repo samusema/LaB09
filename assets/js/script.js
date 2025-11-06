@@ -8,18 +8,12 @@
 const hero = document.getElementById('hero');
 const scrollBtn = document.getElementById('scrollBtn');
 const navbar = document.getElementById('navbar');
-const sidebar = document.getElementById('sidebar');
-const sidebarToggle = document.getElementById('sidebarToggle');
 const mainContent = document.getElementById('mainContent');
-const overlay = document.getElementById('overlay');
-const sidebarLinks = document.querySelectorAll('.sidebar__link');
-const contentSections = document.querySelectorAll('.content-section');
 
 /* ========================================
    State Management
    ======================================== */
 let isHeroScrolled = false;
-let isSidebarOpen = false;
 
 /* ========================================
    Hero Section & Scroll Effects
@@ -38,7 +32,7 @@ function scrollToContent() {
 
 /**
  * Handles scroll events for hero transformation
- * Shows/hides navbar and sidebar based on scroll position
+ * Shows/hides navbar based on scroll position
  */
 function handleScroll() {
     const scrollPosition = window.scrollY;
@@ -48,255 +42,16 @@ function handleScroll() {
     if (scrollPosition > heroHeight * 0.3 && !isHeroScrolled) {
         hero.classList.add('hero--scrolled');
         navbar.classList.add('navbar--visible');
-        sidebar.classList.add('sidebar--visible');
         mainContent.classList.add('main-content--visible');
         isHeroScrolled = true;
     } else if (scrollPosition <= heroHeight * 0.1 && isHeroScrolled) {
         hero.classList.remove('hero--scrolled');
         navbar.classList.remove('navbar--visible');
-        sidebar.classList.remove('sidebar--visible');
         mainContent.classList.remove('main-content--visible');
         isHeroScrolled = false;
-        
-        // Close sidebar if open
-        if (isSidebarOpen) {
-            closeSidebar();
-        }
     }
 }
 
-/* ========================================
-   Sidebar Navigation
-   ======================================== */
-
-/**
- * Toggles the sidebar open/closed
- */
-function toggleSidebar() {
-    isSidebarOpen = !isSidebarOpen;
-    
-    if (isSidebarOpen) {
-        openSidebar();
-    } else {
-        closeSidebar();
-    }
-}
-
-/**
- * Opens the sidebar
- */
-function openSidebar() {
-    sidebar.classList.add('sidebar--open');
-    overlay.classList.add('overlay--active');
-    isSidebarOpen = true;
-}
-
-/**
- * Closes the sidebar
- */
-function closeSidebar() {
-    sidebar.classList.remove('sidebar--open');
-    overlay.classList.remove('overlay--active');
-    isSidebarOpen = false;
-}
-
-/**
- * Handles sidebar link clicks
- * Switches between content sections
- */
-function handleSidebarLinkClick(event) {
-    event.preventDefault();
-    
-    const link = event.currentTarget;
-    const targetSection = link.getAttribute('data-section');
-    
-    // Update active state on sidebar items
-    sidebarLinks.forEach(item => {
-        item.parentElement.classList.remove('sidebar__item--active');
-    });
-    link.parentElement.classList.add('sidebar__item--active');
-    
-    // Show target section
-    switchSection(targetSection);
-    
-    // Close sidebar on mobile
-    if (window.innerWidth <= 1024) {
-        closeSidebar();
-    }
-}
-
-/**
- * Switches between content sections
- * @param {string} sectionId - The ID of the section to show
- */
-function switchSection(sectionId) {
-    contentSections.forEach(section => {
-        section.classList.remove('content-section--active');
-    });
-    
-    const targetSection = document.getElementById(sectionId);
-    if (targetSection) {
-        targetSection.classList.add('content-section--active');
-    }
-}
-
-/* ========================================
-   Filter Buttons (Orders Section)
-   ======================================== */
-
-/**
- * Handles filter button clicks in the orders section
- */
-function handleFilterClick(event) {
-    const button = event.currentTarget;
-    const filterValue = button.getAttribute('data-filter');
-    
-    // Update active state
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(btn => btn.classList.remove('filter-btn--active'));
-    button.classList.add('filter-btn--active');
-    
-    // Filter orders (mock implementation)
-    filterOrders(filterValue);
-}
-
-/**
- * Filters orders based on status
- * @param {string} status - The status to filter by
- */
-function filterOrders(status) {
-    const ordersTable = document.querySelector('.orders-table');
-    
-    // Mock data - in a real application, this would fetch from an API
-    const mockOrders = {
-        all: [
-            { id: 'ORD-1234', customer: 'Mario Rossi', status: 'preparing', amount: '€28.50' },
-            { id: 'ORD-1233', customer: 'Laura Bianchi', status: 'ready', amount: '€42.00' },
-            { id: 'ORD-1232', customer: 'Giuseppe Verdi', status: 'delivered', amount: '€35.50' },
-            { id: 'ORD-1231', customer: 'Anna Ferrari', status: 'preparing', amount: '€31.00' },
-            { id: 'ORD-1230', customer: 'Paolo Conti', status: 'delivered', amount: '€25.50' }
-        ],
-        preparing: [
-            { id: 'ORD-1234', customer: 'Mario Rossi', status: 'preparing', amount: '€28.50' },
-            { id: 'ORD-1231', customer: 'Anna Ferrari', status: 'preparing', amount: '€31.00' }
-        ],
-        ready: [
-            { id: 'ORD-1233', customer: 'Laura Bianchi', status: 'ready', amount: '€42.00' }
-        ],
-        delivered: [
-            { id: 'ORD-1232', customer: 'Giuseppe Verdi', status: 'delivered', amount: '€35.50' },
-            { id: 'ORD-1230', customer: 'Paolo Conti', status: 'delivered', amount: '€25.50' }
-        ]
-    };
-    
-    const orders = mockOrders[status] || mockOrders.all;
-    
-    // Generate table HTML
-    let tableHTML = '<table class="orders-data-table">';
-    tableHTML += '<thead><tr><th>ID Ordine</th><th>Cliente</th><th>Status</th><th>Importo</th></tr></thead>';
-    tableHTML += '<tbody>';
-    
-    orders.forEach(order => {
-        const statusClass = `order-item__status--${order.status}`;
-        const statusText = {
-            preparing: 'In Preparazione',
-            ready: 'Pronto',
-            delivered: 'Consegnato'
-        }[order.status];
-        
-        tableHTML += `
-            <tr>
-                <td><strong>${order.id}</strong></td>
-                <td>${order.customer}</td>
-                <td><span class="order-item__status ${statusClass}">${statusText}</span></td>
-                <td><strong>${order.amount}</strong></td>
-            </tr>
-        `;
-    });
-    
-    tableHTML += '</tbody></table>';
-    ordersTable.innerHTML = tableHTML;
-}
-
-/* ========================================
-   Search Functionality
-   ======================================== */
-
-/**
- * Handles search input
- */
-function handleSearchInput(event) {
-    const searchTerm = event.target.value.toLowerCase();
-    console.log('Searching for:', searchTerm);
-    // Implement search logic here
-}
-
-/* ========================================
-   Notifications
-   ======================================== */
-
-/**
- * Handles notification button click
- */
-function handleNotificationClick() {
-    // Mock notification display
-    showNotification('Hai 3 nuove notifiche');
-}
-
-/**
- * Shows a notification message
- * @param {string} message - The notification message
- */
-function showNotification(message) {
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = 'notification';
-    notification.textContent = message;
-    notification.style.cssText = `
-        position: fixed;
-        top: 80px;
-        right: 20px;
-        background: var(--color-primary);
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        z-index: 9999;
-        animation: slideInRight 0.3s ease;
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Remove after 3 seconds
-    setTimeout(() => {
-        notification.style.animation = 'slideOutRight 0.3s ease';
-        setTimeout(() => notification.remove(), 300);
-    }, 3000);
-}
-
-/* ========================================
-   User Menu Dropdown
-   ======================================== */
-
-/**
- * Handles user menu click
- */
-function handleUserMenuClick() {
-    console.log('User menu clicked');
-    // Implement dropdown menu here
-}
-
-/* ========================================
-   Dynamic Stats Update
-   ======================================== */
-
-/**
- * Updates dashboard statistics (mock)
- */
-function updateDashboardStats() {
-    // In a real application, this would fetch data from an API
-    console.log('Stats updated');
-}
 
 /* ========================================
    Animations
@@ -333,19 +88,6 @@ function initAnimations() {
     });
 }
 
-/* ========================================
-   Window Resize Handler
-   ======================================== */
-
-/**
- * Handles window resize events
- */
-function handleResize() {
-    // Close sidebar on desktop resize
-    if (window.innerWidth > 1024 && isSidebarOpen) {
-        closeSidebar();
-    }
-}
 
 /* ========================================
    Event Listeners Setup
@@ -362,55 +104,6 @@ function initEventListeners() {
     
     // Window scroll
     window.addEventListener('scroll', handleScroll);
-    
-    // Sidebar toggle
-    if (sidebarToggle) {
-        sidebarToggle.addEventListener('click', toggleSidebar);
-    }
-    
-    // Overlay click to close sidebar
-    if (overlay) {
-        overlay.addEventListener('click', closeSidebar);
-    }
-    
-    // Sidebar links
-    sidebarLinks.forEach(link => {
-        link.addEventListener('click', handleSidebarLinkClick);
-    });
-    
-    // Filter buttons
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    filterButtons.forEach(button => {
-        button.addEventListener('click', handleFilterClick);
-    });
-    
-    // Search input
-    const searchInput = document.querySelector('.search-box__input');
-    if (searchInput) {
-        searchInput.addEventListener('input', handleSearchInput);
-    }
-    
-    // Notification button
-    const notificationBtn = document.querySelector('.navbar__notification');
-    if (notificationBtn) {
-        notificationBtn.addEventListener('click', handleNotificationClick);
-    }
-    
-    // User menu
-    const userMenu = document.querySelector('.navbar__user');
-    if (userMenu) {
-        userMenu.addEventListener('click', handleUserMenuClick);
-    }
-    
-    // Window resize
-    window.addEventListener('resize', handleResize);
-    
-    // Prevent sidebar close on sidebar click
-    if (sidebar) {
-        sidebar.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-    }
 }
 
 /* ========================================
@@ -422,69 +115,13 @@ function initEventListeners() {
  * Called when DOM is ready
  */
 function init() {
-    console.log('Pizzeria B09 Dashboard initialized');
+    console.log('Pizzeria B09 Website initialized');
     
     // Setup event listeners
     initEventListeners();
     
     // Initialize animations
     initAnimations();
-    
-    // Update stats periodically (every 30 seconds)
-    setInterval(updateDashboardStats, 30000);
-    
-    // Add CSS animations for notifications
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes slideInRight {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        
-        @keyframes slideOutRight {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-        }
-        
-        .orders-data-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        .orders-data-table th,
-        .orders-data-table td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid var(--color-gray-200);
-        }
-        
-        .orders-data-table th {
-            font-weight: 600;
-            color: var(--color-dark);
-            background: var(--color-gray-100);
-        }
-        
-        .orders-data-table tbody tr {
-            transition: background 0.2s ease;
-        }
-        
-        .orders-data-table tbody tr:hover {
-            background: var(--color-gray-100);
-        }
-    `;
-    document.head.appendChild(style);
 }
 
 /* ========================================
@@ -502,11 +139,6 @@ if (document.readyState === 'loading') {
    Export functions for external use
    ======================================== */
 window.PizzeriaB09 = {
-    switchSection,
-    showNotification,
-    updateDashboardStats,
-    toggleSidebar,
-    openSidebar,
-    closeSidebar
+    init
 };
 
