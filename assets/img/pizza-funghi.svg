@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#8b4513"/>
+  
+  <!-- Definizioni -->
+  <defs>
+    <radialGradient id="pizzaGradientFunghi" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffd93d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f77f00;stop-opacity:1" />
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Pizza Base -->
+  <circle cx="200" cy="150" r="120" fill="url(#pizzaGradientFunghi)"/>
+  
+  <!-- Cheese texture -->
+  <circle cx="200" cy="150" r="115" fill="#ffd700" opacity="0.3"/>
+  
+  <!-- Tomato sauce spots -->
+  <circle cx="170" cy="130" r="16" fill="#d62828" opacity="0.5"/>
+  <circle cx="230" cy="140" r="18" fill="#d62828" opacity="0.5"/>
+  <circle cx="200" cy="170" r="17" fill="#d62828" opacity="0.5"/>
+  <circle cx="160" cy="165" r="15" fill="#d62828" opacity="0.5"/>
+  <circle cx="225" cy="165" r="16" fill="#d62828" opacity="0.5"/>
+  <circle cx="190" cy="135" r="14" fill="#d62828" opacity="0.5"/>
+  
+  <!-- Funghi (Mushrooms) - più grandi e realistici -->
+  <!-- Fungo 1 -->
+  <g filter="url(#shadow)">
+    <ellipse cx="180" cy="140" rx="16" ry="12" fill="#8b7355"/>
+    <ellipse cx="180" cy="145" rx="10" ry="10" fill="#d4c5b9"/>
+    <line x1="180" y1="145" x2="180" y2="152" stroke="#f5f5dc" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Fungo 2 -->
+  <g filter="url(#shadow)">
+    <ellipse cx="220" cy="135" rx="14" ry="11" fill="#8b7355"/>
+    <ellipse cx="220" cy="140" rx="9" ry="9" fill="#d4c5b9"/>
+    <line x1="220" y1="140" x2="220" y2="146" stroke="#f5f5dc" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Fungo 3 -->
+  <g filter="url(#shadow)">
+    <ellipse cx="195" cy="160" rx="15" ry="12" fill="#8b7355"/>
+    <ellipse cx="195" cy="165" rx="9" ry="9" fill="#d4c5b9"/>
+    <line x1="195" y1="165" x2="195" y2="172" stroke="#f5f5dc" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Fungo 4 -->
+  <g filter="url(#shadow)">
+    <ellipse cx="210" cy="155" rx="13" ry="10" fill="#8b7355"/>
+    <ellipse cx="210" cy="159" rx="8" ry="8" fill="#d4c5b9"/>
+    <line x1="210" y1="159" x2="210" y2="165" stroke="#f5f5dc" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Fungo 5 -->
+  <g filter="url(#shadow)">
+    <ellipse cx="170" cy="155" rx="14" ry="11" fill="#8b7355"/>
+    <ellipse cx="170" cy="160" rx="9" ry="9" fill="#d4c5b9"/>
+    <line x1="170" y1="160" x2="170" y2="167" stroke="#f5f5dc" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Fungo 6 - centro -->
+  <g filter="url(#shadow)">
+    <ellipse cx="200" cy="145" rx="16" ry="13" fill="#8b7355"/>
+    <ellipse cx="200" cy="150" rx="10" ry="10" fill="#d4c5b9"/>
+    <line x1="200" y1="150" x2="200" y2="158" stroke="#f5f5dc" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Fungo 7 -->
+  <g filter="url(#shadow)">
+    <ellipse cx="230" cy="160" rx="13" ry="10" fill="#8b7355"/>
+    <ellipse cx="230" cy="164" rx="8" ry="8" fill="#d4c5b9"/>
+    <line x1="230" y1="164" x2="230" y2="170" stroke="#f5f5dc" stroke-width="5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Fungo 8 -->
+  <g filter="url(#shadow)">
+    <ellipse cx="185" cy="175" rx="12" ry="9" fill="#8b7355"/>
+    <ellipse cx="185" cy="179" rx="7" ry="7" fill="#d4c5b9"/>
+    <line x1="185" y1="179" x2="185" y2="184" stroke="#f5f5dc" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Prezzemolo (Parsley) scattered -->
+  <g opacity="0.9">
+    <path d="M 175 132 Q 175 128 177 128 Q 179 128 179 132 L 177 135 Z" fill="#2d5016"/>
+    <path d="M 225 148 Q 225 144 227 144 Q 229 144 229 148 L 227 151 Z" fill="#2d5016"/>
+    <path d="M 165 170 Q 165 166 167 166 Q 169 166 169 170 L 167 173 Z" fill="#2d5016"/>
+    <path d="M 215 172 Q 215 168 217 168 Q 219 168 219 172 L 217 175 Z" fill="#2d5016"/>
+    <path d="M 192 180 Q 192 176 194 176 Q 196 176 196 180 L 194 183 Z" fill="#2d5016"/>
+    <path d="M 207 138 Q 207 134 209 134 Q 211 134 211 138 L 209 141 Z" fill="#2d5016"/>
+  </g>
+  
+  <!-- Lamelle funghi visibili (dettaglio) -->
+  <g opacity="0.4">
+    <line x1="174" y1="145" x2="180" y2="145" stroke="#8b7355" stroke-width="1"/>
+    <line x1="176" y1="143" x2="180" y2="143" stroke="#8b7355" stroke-width="1"/>
+    <line x1="214" y1="140" x2="220" y2="140" stroke="#8b7355" stroke-width="1"/>
+    <line x1="216" y1="138" x2="220" y2="138" stroke="#8b7355" stroke-width="1"/>
+    <line x1="194" y1="150" x2="200" y2="150" stroke="#8b7355" stroke-width="1"/>
+    <line x1="196" y1="148" x2="200" y2="148" stroke="#8b7355" stroke-width="1"/>
+  </g>
+  
+  <!-- Crust -->
+  <circle cx="200" cy="150" r="120" fill="none" stroke="#d2691e" stroke-width="12"/>
+  
+  <!-- Text -->
+  <text x="200" y="270" font-family="Poppins, sans-serif" font-size="24" font-weight="bold" fill="#fefae0" text-anchor="middle">PIZZA AI FUNGHI</text>
+</svg>
+
