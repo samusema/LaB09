@@ -1,21 +1,20 @@
-<<<<<<< HEAD
-# Pizzeria B09 - Dashboard Amministrativa
+# Pizzeria B09 - Sito Informativo
 
-Dashboard moderna e responsive per la gestione della pizzeria "Pizzeria B09".
+Sito statico moderno e responsive per la pizzeria "La B09" (ITI Othoca).
 
 ## 🍕 Descrizione
 
-Dashboard amministrativa completa per gestire ordini, menu, clienti e statistiche di vendita. Il progetto è realizzato con HTML5, CSS3 e JavaScript vanilla (ES6+), senza dipendenze da framework esterni.
+Sito web informativo completo per presentare la pizzeria, il menu, i piatti speciali e le informazioni di contatto. Il progetto è realizzato con HTML5, CSS3 e JavaScript vanilla (ES6+), senza dipendenze da framework esterni, seguendo le best practices di design e accessibilità.
 
 ## ✨ Caratteristiche
 
-- **Hero Section Full Screen**: Immagine di sfondo a tutto schermo che si sposta verso l'alto con lo scroll
-- **Dashboard Completa**: Panoramica con statistiche in tempo reale
-- **Gestione Ordini**: Visualizza e filtra gli ordini per stato
-- **Gestione Menu**: Aggiungi, modifica ed elimina prodotti dal menu
+- **Hero Section Full Screen**: Immagine di sfondo a tutto schermo con logo e slogan
+- **Scroll Fluido**: Animazioni smooth e transizioni moderne
+- **Pagine Dettaglio Piatti**: Template dedicato per ogni portata del menu
 - **Design Responsive**: Ottimizzato per desktop, tablet e mobile
-- **Animazioni Fluide**: Transizioni e animazioni moderne
-- **Sidebar Navigabile**: Menu laterale con navigazione tra sezioni
+- **Footer Informativo**: Mappa sito, contatti, orari e social links
+- **CSS Consolidato**: Un unico file CSS per tutto il sito
+- **Navigazione Intuitiva**: Top navbar con link alle sezioni principali
 
 ## 🎨 Design
 
@@ -33,17 +32,30 @@ Dashboard amministrativa completa per gestire ordini, menu, clienti e statistich
 
 ```
 PizzeriaLa09/
-├── index.html                 # File HTML principale
+├── index.html                      # Homepage con hero e info boxes
 ├── assets/
 │   ├── css/
-│   │   └── style.css         # Stili globali (BEM methodology)
+│   │   └── style.css              # Stili globali consolidati (BEM)
 │   ├── js/
-│   │   └── script.js         # JavaScript principale
+│   │   └── script.js              # JavaScript principale
 │   └── img/
-│       ├── hero-bg.jpg       # Immagine hero (da sostituire con la tua)
-│       ├── logo-icon.svg     # Logo pizzeria
-│       ├── user-avatar.svg   # Avatar utente
-│       └── pizza-margherita.svg # Immagine pizza esempio
+│       ├── hero-bg.jpg            # Immagine hero background
+│       ├── logo-icon.svg          # Logo pizzeria
+│       ├── pizza-margherita.svg   # Immagine pizza Margherita
+│       ├── pizza-funghi.svg       # Immagine pizza Funghi
+│       └── user-avatar.svg        # Avatar icona
+├── Pizze/
+│   ├── pizzaMargherita.html       # Dettaglio Pizza Margherita
+│   └── pizzaFunghi.html           # Dettaglio Pizza Funghi
+├── Bevande/
+│   └── portata.html               # Template bevande
+├── Dolci/
+│   └── portata.html               # Template dolci
+├── Portate/
+│   ├── Primi/
+│   │   └── portata.html           # Template primi piatti
+│   └── Secondi/
+│       └── portata.html           # Template secondi piatti
 └── README.md
 ```
 
@@ -51,7 +63,7 @@ PizzeriaLa09/
 
 ### Requisiti
 - Browser moderno (Chrome, Firefox, Safari, Edge)
-- Server web locale (opzionale, ma consigliato)
+- Server web locale (consigliato per path corretti)
 
 ### Installazione
 
@@ -61,15 +73,10 @@ PizzeriaLa09/
    cd PizzeriaLa09
    ```
 
-2. **Sostituisci l'immagine hero**
-   - Sostituisci il file `assets/img/hero-bg.jpg` con la tua immagine
-   - Dimensioni consigliate: 1920x1080px o superiori
-   - Formato: JPG, PNG o WebP
-
-3. **Avvia un server locale** (opzionale ma consigliato)
+2. **Avvia un server locale**
    ```bash
    # Con Python
-   python -m http.server 8000
+   python3 -m http.server 8000
    
    # Con Node.js e http-server
    npx http-server
@@ -78,35 +85,27 @@ PizzeriaLa09/
    php -S localhost:8000
    ```
 
-4. **Apri nel browser**
+3. **Apri nel browser**
    - Vai su `http://localhost:8000`
-   - Oppure apri direttamente `index.html` nel browser
+   - Naviga tra le sezioni e le pagine dettaglio
 
 ## 🎯 Funzionalità
 
-### Hero Section
-- **Scroll to Content**: Clicca sul bottone con la freccia per scorrere alla dashboard
-- **Effetto Parallax**: L'immagine di sfondo si muove con lo scroll
+### Homepage (index.html)
+- **Hero Section**: Full-screen con logo, slogan "PIZZA PERFECTION, PAZZI STYLE!" e bottone scroll
+- **Info Boxes**: 4 box informativi modificabili (in linea singola)
+- **Top Navbar**: Navigazione rapida (Home, Menu, Chi Siamo)
+- **Footer Completo**: Site map, Find Us, Orari, Social Links
 
-### Dashboard
-- **Statistiche in Tempo Reale**: Visualizza incassi, ordini, pizze vendute
-- **Ordini Recenti**: Vedi gli ultimi ordini con stato e importo
-- **Pizze Più Vendute**: Classifica delle pizze più popolari
-
-### Gestione Ordini
-- **Filtri**: Filtra per tutti, in preparazione, pronti, consegnati
-- **Ricerca**: Cerca ordini per ID o cliente
-- **Tabella Interattiva**: Visualizza tutti i dettagli degli ordini
-
-### Gestione Menu
-- **Visualizza Prodotti**: Vedi tutti i prodotti del menu
-- **Aggiungi**: Aggiungi nuovi prodotti (UI mock)
-- **Modifica/Elimina**: Modifica o rimuovi prodotti (UI mock)
-
-### Sidebar Navigation
-- **Navigazione Veloce**: Passa rapidamente tra le sezioni
-- **Mobile Friendly**: Menu a scomparsa su dispositivi mobili
-- **Indicatore Attivo**: Mostra la sezione corrente
+### Pagine Dettaglio Piatti
+Ogni pagina piatto include:
+- **Header Portata**: Nome piatto + prezzo
+- **Immagine**: SVG personalizzata per ogni piatto
+- **Descrizione Completa**: Storia e caratteristiche del piatto
+- **Ingredienti**: Lista completa con icone
+- **Allergeni**: Badge visuali per allergeni
+- **Info Cards**: 3 box (Forno a Legna, Lievitazione 24h, Ingredienti Freschi)
+- **Footer**: Identico alla homepage per coerenza
 
 ## 🛠️ Tecnologie Utilizzate
 
@@ -114,91 +113,188 @@ PizzeriaLa09/
 - **CSS3**: 
   - CSS Variables per temi
   - Flexbox e Grid Layout
-  - Animazioni e transizioni
-  - BEM Methodology
+  - Animazioni e transizioni fluide
+  - BEM Methodology con prefissi per pagina
 - **JavaScript ES6+**:
   - Vanilla JS (nessun framework)
   - Event Listeners
   - Intersection Observer API
-  - Scroll Events
+  - Scroll Events smooth
 
 ## 📱 Responsive Design
 
 Il design è completamente responsive e si adatta a:
-- **Desktop**: Layout completo con sidebar fissa
-- **Tablet**: Layout adattivo con sidebar a scomparsa
-- **Mobile**: Layout ottimizzato con menu hamburger
+- **Desktop (>1024px)**: Layout completo con elementi affiancati
+- **Tablet (768-1024px)**: Layout adattivo con grid a 2 colonne
+- **Mobile (<768px)**: Layout verticale ottimizzato
+
+### Breakpoints Principali
+```css
+@media (max-width: 1024px) { /* Tablet */ }
+@media (max-width: 768px)  { /* Mobile */ }
+@media (max-width: 480px)  { /* Small Mobile */ }
+```
 
 ## 🎨 Convenzioni di Naming
 
 ### HTML/CSS
 - **BEM (Block Element Modifier)**: `.block__element--modifier`
+- **Prefissi per Pagina**: `.portata-nomeclasse`, `.homepage-nomeclasse`
 - Esempi:
-  - `.sidebar__item--active`
-  - `.stat-card__icon`
-  - `.order-item__status--preparing`
+  - `.portata-header__title`
+  - `.portata-details__container`
+  - `.portata-extra-card__icon`
+  - `.navbar__link`
+  - `.footer__section`
 
 ### JavaScript
 - **camelCase** per variabili: `isHeroScrolled`, `mainContent`
-- **Prefisso verbale** per funzioni: `toggleSidebar()`, `handleScroll()`
-- **Costanti in UPPERCASE**: (quando necessario)
+- **Prefisso verbale** per funzioni: `handleScroll()`, `scrollToContent()`
+- **Costanti in UPPERCASE**: quando necessario
+
+### File e Cartelle
+- **PascalCase per categorie**: `Pizze/`, `Bevande/`, `Dolci/`
+- **camelCase per file HTML**: `pizzaFunghi.html`, `pizzaMargherita.html`
+- **kebab-case per assets**: `hero-bg.jpg`, `pizza-funghi.svg`
 
 ## 🔧 Personalizzazione
 
-### Cambiare i Colori
+### Cambiare i Colori Brand
 Modifica le CSS Variables in `assets/css/style.css`:
 
 ```css
 :root {
-    --color-primary: #d62828;
-    --color-secondary: #f77f00;
-    --color-dark: #003049;
-    --color-light: #fefae0;
+    --color-primary: #d62828;      /* Rosso pizza */
+    --color-secondary: #f77f00;    /* Arancio forno */
+    --color-dark: #003049;         /* Blu scuro */
+    --color-light: #fefae0;        /* Bianco panna */
 }
 ```
 
-### Aggiungere Nuove Sezioni
-1. Aggiungi la sezione nell'HTML con classe `.content-section`
-2. Aggiungi il link nella sidebar con `data-section="nome-sezione"`
-3. Il JavaScript gestirà automaticamente la navigazione
+### Aggiungere un Nuovo Piatto
 
-### Modificare le Animazioni
-Modifica i timing in `assets/css/style.css`:
+1. **Crea il file HTML** nella cartella appropriata:
+   ```bash
+   # Esempio per una nuova pizza
+   cp Pizze/pizzaFunghi.html Pizze/pizzaDiavola.html
+   ```
 
-```css
-:root {
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
-}
+2. **Modifica i contenuti**:
+   - Nome piatto nel `<title>` e `.portata-header__title`
+   - Prezzo in `.portata-header__price`
+   - Descrizione in `.portata-details__text`
+   - Lista ingredienti in `.portata-details__ingredients`
+   - Allergeni in `.portata-details__allergens`
+
+3. **Crea l'immagine SVG** (opzionale):
+   ```bash
+   # Salva in assets/img/
+   assets/img/pizza-diavola.svg
+   ```
+
+4. **Collega l'immagine**:
+   ```html
+   <img src="../assets/img/pizza-diavola.svg" alt="Pizza Diavola">
+   ```
+
+### Modificare gli Info Boxes Homepage
+
+In `index.html`, cerca la sezione `.info__boxes`:
+
+```html
+<div class="info-box">
+    <div class="info-box__icon">
+        <i class="fas fa-pizza-slice"></i> <!-- Cambia icona -->
+    </div>
+    <h3 class="info-box__title">Titolo Box</h3> <!-- Cambia titolo -->
+    <p class="info-box__text">Descrizione...</p> <!-- Cambia testo -->
+</div>
 ```
 
-## 📝 Note per lo Sviluppo
+### Modificare Footer
 
-- **Nessun CSS inline**: Tutti gli stili sono nel file CSS
-- **Nessun JS inline**: Tutto il JavaScript è nel file JS
-- **Commenti chiari**: Ogni sezione è ben commentata
-- **Codice modulare**: Funzioni separate per ogni responsabilità
-- **Accessibilità**: Testo alternativo, navigazione da tastiera, contrasto ottimale
+In qualsiasi pagina HTML, modifica la sezione `<footer class="footer">`:
+
+```html
+<div class="footer__section">
+    <h3 class="footer__heading">FIND US</h3>
+    <ul class="footer__info">
+        <li>Indirizzo Pizzeria</li>
+        <li><a href="tel:+39...">Telefono</a></li>
+        <li><a href="mailto:...">Email</a></li>
+    </ul>
+</div>
+```
+
+## 📝 Best Practices Seguite
+
+### HTML
+- ✅ Markup semantico (`<main>`, `<section>`, `<nav>`, `<footer>`)
+- ✅ Meta tags per SEO e responsive
+- ✅ Alt text per tutte le immagini
+- ✅ Nessun CSS o JS inline
+
+### CSS
+- ✅ Un unico file consolidato (`style.css`)
+- ✅ BEM methodology con prefissi per pagina
+- ✅ CSS Variables per coerenza
+- ✅ Mobile-first approach
+- ✅ Commenti chiari per ogni sezione
+
+### JavaScript
+- ✅ Vanilla JS (no framework)
+- ✅ Event delegation dove possibile
+- ✅ Funzioni modulari e riutilizzabili
+- ✅ Commenti descrittivi
+
+### Accessibilità
+- ✅ Contrasto minimo 4.5:1 (WCAG AA)
+- ✅ Navigazione da tastiera funzionante
+- ✅ Attributi ARIA dove necessario
+- ✅ Focus visibile su elementi interattivi
 
 ## 🌐 Browser Support
 
-- Chrome (ultime 2 versioni)
-- Firefox (ultime 2 versioni)
-- Safari (ultime 2 versioni)
-- Edge (ultime 2 versioni)
+- ✅ Chrome (ultime 2 versioni)
+- ✅ Firefox (ultime 2 versioni)
+- ✅ Safari (ultime 2 versioni)
+- ✅ Edge (ultime 2 versioni)
+
+## 🐛 Troubleshooting
+
+### Le immagini non si vedono
+- Verifica che il server locale sia attivo
+- Controlla che i path siano corretti (es. `../assets/img/` per pagine in sottocartelle)
+- Assicurati che i file SVG/JPG esistano nella cartella `assets/img/`
+
+### Il CSS non viene applicato
+- Verifica che `style.css` sia linkato correttamente
+- Controlla la console del browser per errori 404
+- Usa path relativi corretti in base alla posizione della pagina
+
+### Gli scroll smooth non funzionano
+- Verifica che il browser supporti `scroll-behavior: smooth`
+- Controlla che `script.js` sia caricato correttamente
+- Apri la console e cerca errori JavaScript
 
 ## 📄 Licenza
 
-Questo progetto è proprietario di Pizzeria B09.
+Questo progetto è proprietario di **Pizzeria B09 - ITI Othoca**.
 
 ## 👥 Autore
 
-Pizzeria B09 Dashboard - 2023
+**La B09** - Pizzeria - 2025
 
 ---
 
-**Made with ❤️ and 🍕 by Pizzeria B09**
-=======
-# La B09
->>>>>>> 96014a89a36efb177944dd21a130e4ea988b95be
+**Made with ❤️ and 🍕 by ITI Othoca**
+
+## 📞 Contatti
+
+- **Indirizzo**: 154, avenue Montaigne, Paris
+- **Telefono**: +39 07 98 89 09
+- **Email**: contact@pizzab09.com
+
+---
+
+*"PIZZA PERFECTION, PAZZI STYLE!"* 🍕✨
