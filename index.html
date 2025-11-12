@@ -39,7 +39,7 @@
     <nav class="navbar" id="navbar">
         <div class="navbar__container">
             <div class="navbar__brand">
-                <h2 class="navbar__logo">Pizzeria B09</h2>
+                <a href="index.html" class="navbar__logo" style="cursor: pointer;">Pizzeria B09</a>
             </div>
             <div class="navbar__links">
                 <a href="#home" class="navbar__link" data-section="home">Home</a>
@@ -60,100 +60,313 @@
                 <p class="section-header__subtitle">La vera pizza Oristanese poco fuori dalla città!</p>
             </header>
 
-            <!-- Main Info Boxes - 2 BOX PRINCIPALI MODIFICABILI -->
+            <!-- Main Info Boxes - 4 CATEGORIE MENU -->
             <div class="info-boxes">
                 
-                <!-- BOX 1 - Modifica titolo, testo e icona -->
-                <div class="info-box info-box--primary">
+                <!-- BOX 1 - Menu Pizzeria -->
+                <a href="menuPizzeria.html" class="info-box info-box--primary">
                     <div class="info-box__icon">
-                        <i class="fas fa-fire"></i>
+                        <i class="fas fa-pizza-slice"></i>
                     </div>
                     <div class="info-box__content">
                         <h2 class="info-box__title">Menù Pizzeria</h2>
                         <p class="info-box__text">
-                           
-
-                            
+                            Scopri le nostre pizze tradizionali e gourmet
                         </p>
-                        <ul class="info-box__list">
-                            <li><i class="fas fa-check"></i> Impasto a lievitazione naturale 24h</li>
-                            <li><i class="fas fa-check"></i> Ingredienti freschi e selezionati</li>
-                            <li><i class="fas fa-check"></i> Ricette tradizionali napoletane</li>
-                            <li><i class="fas fa-check"></i> Preparazione artigianale</li>
-                        </ul>
                     </div>
-                </div>
+                </a>
 
-                <!-- BOX 2 - Modifica titolo, testo e icona -->
-                <div class="info-box info-box--secondary">
+                <!-- BOX 2 - Menu Ristorante -->
+                <a href="menuRistorante.html" class="info-box info-box--secondary">
                     <div class="info-box__icon">
-                        <i class="fas fa-truck"></i>
+                        <i class="fas fa-utensils"></i>
                     </div>
                     <div class="info-box__content">
                         <h2 class="info-box__title">Menù Ristorante</h2>
                         <p class="info-box__text">
-                            Ordina la tua pizza preferita comodamente da casa! 
-                            Consegniamo in tutta la città con il nostro servizio rapido e affidabile. 
-                            La tua pizza arriverà calda e fragrante, proprio come appena sfornata.
+                            Primi, secondi e contorni della tradizione
                         </p>
-                        <ul class="info-box__list">
-                            <li><i class="fas fa-check"></i> Consegna in 30-40 minuti</li>
-                            <li><i class="fas fa-check"></i> Zona di consegna ampia</li>
-                            <li><i class="fas fa-check"></i> Pagamento online o alla consegna</li>
-                            <li><i class="fas fa-check"></i> Tracking dell'ordine in tempo reale</li>
-                        </ul>
-                        <a href="tel:+39123456789" class="info-box__btn">
-                            <i class="fas fa-phone"></i> Chiama per Ordinare
-                        </a>
                     </div>
-                </div>
+                </a>
 
-                <!-- BOX 3 - Modifica titolo, testo e icona -->
-                <div class="info-box info-box--primary">
+                <!-- BOX 3 - Menu Dolci -->
+                <a href="menuDolci.html" class="info-box info-box--primary">
                     <div class="info-box__icon">
-                        <i class="fas fa-leaf"></i>
+                        <i class="fas fa-ice-cream"></i>
                     </div>
                     <div class="info-box__content">
                         <h2 class="info-box__title">Menu Dolci</h2>
                         <p class="info-box__text">
-                            Selezioniamo con cura ogni ingrediente dai migliori produttori locali. 
-                            La qualità è la nostra priorità, dalla mozzarella di bufala DOP 
-                            al pomodoro San Marzano, ogni elemento è fresco e genuino.
+                            Dolci artigianali e dessert della casa
                         </p>
-                        <ul class="info-box__list">
-                            <li><i class="fas fa-check"></i> Mozzarella di bufala DOP</li>
-                            <li><i class="fas fa-check"></i> Pomodoro San Marzano IGP</li>
-                            <li><i class="fas fa-check"></i> Olio extravergine di oliva</li>
-                            <li><i class="fas fa-check"></i> Basilico fresco del giorno</li>
-                        </ul>
                     </div>
-                </div>
+                </a>
 
-                <!-- BOX 4 - Modifica titolo, testo e icona -->
-                <div class="info-box info-box--secondary">
+                <!-- BOX 4 - Menu Bevande -->
+                <a href="menuBevande.html" class="info-box info-box--secondary">
                     <div class="info-box__icon">
-                        <i class="fas fa-calendar-check"></i>
+                        <i class="fas fa-glass-cheers"></i>
                     </div>
                     <div class="info-box__content">
                         <h2 class="info-box__title">Menu Bevande</h2>
                         <p class="info-box__text">
-                            Vuoi gustare le nostre pizze nel nostro accogliente locale? 
-                            Prenota il tuo tavolo online o telefonicamente. Ti aspettiamo 
-                            per farti vivere un'esperienza culinaria indimenticabile!
+                            Vini, birre, bibite e bevande speciali
                         </p>
-                        <ul class="info-box__list">
-                            <li><i class="fas fa-check"></i> Prenotazione facile e veloce</li>
-                            <li><i class="fas fa-check"></i> Sala interna e dehors esterno</li>
-                            <li><i class="fas fa-check"></i> Menu per celiaci disponibile</li>
-                            <li><i class="fas fa-check"></i> Wi-Fi gratuito per i clienti</li>
-                        </ul>
-                        <a href="tel:+39123456789" class="info-box__btn">
-                            <i class="fas fa-phone"></i> Prenota Ora
+                    </div>
+                </a>
+
+            </div>
+
+            <!-- Le Nostre Specialità -->
+            <section class="specialita-section">
+                <h2 class="specialita-section__title">Le Nostre Specialità</h2>
+                <p class="specialita-section__subtitle">Pizze preparate con passione e ingredienti selezionati</p>
+                
+                <div class="specialita-grid">
+                    
+                    <div class="specialita-card">
+                        <div class="specialita-card__image">
+                            <img src="assets/img/pizza-margherita.svg" alt="Pizza Margherita">
+                            <div class="specialita-card__badge">Classica</div>
+                        </div>
+                        <div class="specialita-card__content">
+                            <h3 class="specialita-card__name">Pizza Margherita</h3>
+                            <p class="specialita-card__description">
+                                Il grande classico della tradizione napoletana con pomodoro San Marzano DOP
+                            </p>
+                            <div class="specialita-card__footer">
+                                <span class="specialita-card__price">€7.50</span>
+                                <a href="Pizze/pizzaMargherita.html" class="specialita-card__link">
+                                    Scopri di più <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="specialita-card">
+                        <div class="specialita-card__image">
+                            <img src="assets/img/pizza-funghi.svg" alt="Pizza Funghi">
+                            <div class="specialita-card__badge">Popolare</div>
+                        </div>
+                        <div class="specialita-card__content">
+                            <h3 class="specialita-card__name">Pizza ai Funghi</h3>
+                            <p class="specialita-card__description">
+                                Funghi freschi misti con mozzarella fior di latte e prezzemolo
+                            </p>
+                            <div class="specialita-card__footer">
+                                <span class="specialita-card__price">€8.50</span>
+                                <a href="Pizze/pizzaFunghi.html" class="specialita-card__link">
+                                    Scopri di più <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="specialita-card">
+                        <div class="specialita-card__image">
+                            <img src="assets/img/pizza-margherita.svg" alt="Pizza Tartufo">
+                            <div class="specialita-card__badge specialita-card__badge--gold">Gourmet</div>
+                        </div>
+                        <div class="specialita-card__content">
+                            <h3 class="specialita-card__name">Pizza al Tartufo</h3>
+                            <p class="specialita-card__description">
+                                Crema di tartufo nero con mozzarella di bufala DOP e funghi porcini
+                            </p>
+                            <div class="specialita-card__footer">
+                                <span class="specialita-card__price">€13.00</span>
+                                <a href="Pizze/pizzaTartufo.html" class="specialita-card__link">
+                                    Scopri di più <i class="fas fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Il Nostro Chef -->
+            <section class="chef-section">
+                <div class="chef-container">
+                    <div class="chef-image">
+                        <img src="assets/img/contusexysegafoto.jpg" alt="Richard Contuz - Chef e Proprietario">
+                        <div class="chef-badge">
+                            <i class="fas fa-star"></i>
+                            <span>Chef Stellato</span>
+                        </div>
+                    </div>
+                    <div class="chef-content">
+                        <div class="chef-header">
+                            <span class="chef-subtitle">Il Maestro Dietro le Quinte</span>
+                            <h2 class="chef-title">Richard Contuz</h2>
+                            <p class="chef-role">Proprietario & Cuoco Principale</p>
+                        </div>
+                        <div class="chef-bio">
+                            <p class="chef-text">
+                                <strong>Richard Contuz</strong>, nato e cresciuto in Mongolia da genitori napoletani, 
+                                ha ereditato la passione per l'arte della pizza fin dalla più tenera età. 
+                            </p>
+                            <p class="chef-text">
+                                Già dall'età di <strong>3 anni</strong> sapeva fare le margherite come solo pochi napoletani 
+                                sanno fare, mostrando un talento innato e una dedizione straordinaria alla tradizione culinaria 
+                                della sua famiglia.
+                            </p>
+                            <p class="chef-text">
+                                A soli <strong>18 anni</strong> apre la sua prima pizzeria, conquistando immediatamente 
+                                il cuore dei clienti con la sua autenticità e maestria. Oggi Richard gestisce 
+                                <strong>67 pizzerie</strong> in giro per il mondo, portando ovunque il sapore autentico 
+                                della tradizione napoletana.
+                            </p>
+                            <p class="chef-highlight">
+                                <i class="fas fa-trophy"></i>
+                                Un vero campione della pizza napoletana!
+                            </p>
+                        </div>
+                        <div class="chef-stats">
+                            <div class="chef-stat">
+                                <span class="chef-stat__number">3</span>
+                                <span class="chef-stat__label">Anni quando ha iniziato</span>
+                            </div>
+                            <div class="chef-stat">
+                                <span class="chef-stat__number">67</span>
+                                <span class="chef-stat__label">Pizzerie nel Mondo</span>
+                            </div>
+                            <div class="chef-stat">
+                                <span class="chef-stat__number">30+</span>
+                                <span class="chef-stat__label">Anni di Esperienza</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Perché Sceglierci -->
+            <section class="features-section">
+                <h2 class="features-section__title">Perché Scegliere La B09</h2>
+                <p class="features-section__subtitle">La qualità che fa la differenza</p>
+                
+                <div class="features-grid">
+                    
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-fire-alt"></i>
+                        </div>
+                        <h3 class="feature-card__title">Forno a Legna Tradizionale</h3>
+                        <p class="feature-card__text">
+                            Cottura a 450°C nel nostro autentico forno a legna per una pizza croccante e fragrante
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3 class="feature-card__title">Lievitazione 24 Ore</h3>
+                        <p class="feature-card__text">
+                            Impasto lievitato naturalmente per 24 ore: leggero, digeribile e dal sapore unico
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="feature-card__title">Ingredienti DOP e IGP</h3>
+                        <p class="feature-card__text">
+                            Solo prodotti certificati: mozzarella di bufala DOP, pomodoro San Marzano IGP
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-user-chef"></i>
+                        </div>
+                        <h3 class="feature-card__title">Maestri Pizzaioli</h3>
+                        <p class="feature-card__text">
+                            Team esperto formato secondo la tradizione napoletana con anni di esperienza
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3 class="feature-card__title">Km Zero e Biologico</h3>
+                        <p class="feature-card__text">
+                            Prodotti locali a km zero e ingredienti biologici per un gusto autentico e sostenibile
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-card__icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="feature-card__title">Passione Italiana</h3>
+                        <p class="feature-card__text">
+                            La vera passione italiana in ogni pizza: tradizione, amore e dedizione da generazioni
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- I Nostri Numeri -->
+            <section class="stats-section">
+                <div class="stats-container">
+                    
+                    <div class="stat-item">
+                        <div class="stat-item__icon">
+                            <i class="fas fa-pizza-slice"></i>
+                        </div>
+                        <div class="stat-item__number">10.000+</div>
+                        <div class="stat-item__label">Pizze Sfornate</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-item__icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="stat-item__number">5.000+</div>
+                        <div class="stat-item__label">Clienti Soddisfatti</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-item__icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-item__number">4.8/5</div>
+                        <div class="stat-item__label">Valutazione Media</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-item__icon">
+                            <i class="fas fa-calendar"></i>
+                        </div>
+                        <div class="stat-item__number">2 Anni</div>
+                        <div class="stat-item__label">Di Esperienza</div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Call to Action -->
+            <section class="cta-section">
+                <div class="cta-content">
+                    <h2 class="cta-content__title">Vieni a Trovarci!</h2>
+                    <p class="cta-content__text">
+                        Scopri il vero sapore della pizza napoletana. Ti aspettiamo nel nostro accogliente locale 
+                        per un'esperienza gastronomica indimenticabile. Prenota ora il tuo tavolo!
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="tel:+390798989" class="cta-btn cta-btn--primary">
+                            <i class="fas fa-phone"></i> Chiama Ora
+                        </a>
+                        <a href="menuPizzeria.html" class="cta-btn cta-btn--secondary">
+                            <i class="fas fa-book-open"></i> Vedi il Menu
                         </a>
                     </div>
                 </div>
+            </section>
 
-            </div>
         </section>
 
         <!-- Menu Section -->
