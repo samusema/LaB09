@@ -1081,6 +1081,7 @@ button {
    ======================================== */
 .footer {
     background: var(--color-primary);
+    background-color: #813737;
     color: var(--color-white);
     padding: var(--spacing-xl) 0;
     margin-top: var(--spacing-xl);
@@ -1738,7 +1739,8 @@ button {
 
 /* Menu Page Header */
 .menu-page-header {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    background: linear-gradient(135deg, #813737, #813737);
+    background-color: #813737;
     padding: var(--spacing-xl) var(--spacing-lg);
     text-align: center;
     color: var(--color-white);
@@ -2323,7 +2325,7 @@ button {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
     max-width: 1400px;
     margin: 0 auto;
@@ -2372,7 +2374,7 @@ button {
 /* Sezione Stats */
 .stats-section {
     padding: var(--spacing-xl) var(--spacing-lg);
-    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    background: linear-gradient(135deg, #813737, #813737);
     color: var(--color-white);
 }
 
@@ -2476,9 +2478,12 @@ button {
 
 /* Responsive Design - Nuove Sezioni */
 @media (max-width: 1024px) {
-    .specialita-grid,
-    .features-grid {
+    .specialita-grid {
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .stats-container {
