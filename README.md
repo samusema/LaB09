@@ -291,7 +291,7 @@ Questo progetto è proprietario di **Pizzeria B09 - ITI Othoca**.
 
 ## 📞 Contatti
 
-- **Indirizzo**: 154, avenue Montaigne, Paris
+- **Indirizzo**: Via Vittorio Emanuele 25, Abbasanta, OR
 - **Telefono**: +39 07 98 89 09
 - **Email**: contact@pizzab09.com
 
